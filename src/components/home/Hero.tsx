@@ -60,9 +60,9 @@ export function Hero() {
   };
 
   return (
-    <section ref={containerRef} className="relative h-[100dvh] min-h-[700px] flex items-center pt-32 pb-4 overflow-hidden bg-background">
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-16 lg:gap-8 items-center h-full">
+    <section ref={containerRef} className="relative min-h-[100dvh] flex items-center pt-36 lg:pt-32 pb-16 lg:pb-4 overflow-hidden bg-background">
+      <div className="container mx-auto px-6 relative z-10 w-full mt-4 lg:mt-0">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center h-full">
           
           {/* Text Content */}
           <motion.div
@@ -105,7 +105,7 @@ export function Hero() {
             </motion.div>
 
             {/* Bottom Features */}
-            <motion.div variants={itemVariants} className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-primary/20">
+            <motion.div variants={itemVariants} className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 pt-8 border-t border-primary/20">
               <div className="flex flex-col gap-1">
                 <div className="font-semibold text-[15px] md:text-[16px] text-text-primary">Freshly Baked Daily</div>
                 <div className="text-[12px] md:text-[13px] text-text-secondary">Made with love</div>
@@ -131,7 +131,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
             style={{ y: yImage, ...gpuAcceleration }}
-            className="lg:col-span-5 relative mx-auto lg:ml-auto w-full h-[450px] lg:h-[65vh] lg:max-h-[600px] mt-8 lg:mt-0 flex flex-col justify-center"
+            className="lg:col-span-5 relative mx-auto lg:ml-auto w-full h-[400px] sm:h-[450px] lg:h-[65vh] lg:max-h-[600px] mt-4 lg:mt-0 flex flex-col justify-center"
           >
             {/* Primary Main Arch Image */}
             <div className="absolute top-0 right-0 w-[90%] h-full overflow-hidden rounded-t-[250px] shadow-2xl z-10 border-[4px] border-white/30 bg-white/20 backdrop-blur-sm">

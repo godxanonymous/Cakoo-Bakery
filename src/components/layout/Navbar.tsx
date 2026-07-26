@@ -63,7 +63,7 @@ export function Navbar() {
       {/* Main Navbar */}
       <div className={`transition-all duration-500 w-full relative ${isScrolled ? 'px-4 pt-4 pb-0' : 'px-4 pt-6 pb-8'}`}>
         {/* Subtle Dark Gradient to differentiate from bg */}
-        <div className={`absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-transparent pointer-events-none transition-opacity duration-500 ${isScrolled ? 'opacity-0' : 'opacity-100 -z-10'}`} />
+        <div className={`hidden md:block absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-transparent pointer-events-none transition-opacity duration-500 ${isScrolled ? 'opacity-0' : 'opacity-100 -z-10'}`} />
         
         <div className={`mx-auto flex items-center justify-between rounded-full px-6 md:px-8 py-3 transition-all duration-500 relative ${
           isScrolled ? 'bg-white/40 backdrop-blur-2xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.05)] max-w-7xl' : 'bg-white/50 backdrop-blur-md border border-white/60 shadow-md max-w-[1400px]'
