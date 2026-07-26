@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { 
   ChevronRight, ChevronLeft, Check, UploadCloud, CheckCircle2, 
   MapPin, Clock, Heart, Sparkles, Cake as CakeIcon, Image as ImageIcon,
-  Info, X
+  Info, X, Loader2
 } from "lucide-react";
 import { useCartStore } from "@/store/cartStore";
 import { toast } from "sonner";
