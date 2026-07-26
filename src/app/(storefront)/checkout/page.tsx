@@ -72,7 +72,13 @@ export default function CheckoutPage() {
       
       const couponData = res.coupon;
       
-      if (couponData.minPurchase > 0 && subtotal < couponData.minPurchase) {
+      if (!couponData) {
+        toast.error("Failed to apply coupon");
+        setAppliedCoupon(null);
+        return;
+      }
+      
+      if (couponData.minPurchase && couponData.minPurchase > 0 && subtotal < couponData.minPurchase) {
         toast.error(`Minimum purchase of Rs. ${couponData.minPurchase} required`);
         return;
       }
