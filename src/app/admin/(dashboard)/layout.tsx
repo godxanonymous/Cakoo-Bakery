@@ -175,7 +175,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             {/* Branch Selector Filter */}
             <div className="flex items-center">
               <span className="text-xs font-medium text-slate-500 uppercase tracking-wider mr-3 hidden sm:block">Filter Dashboard:</span>
-              <Select value={adminBranchFilter} onValueChange={setAdminBranchFilter}>
+              <Select value={adminBranchFilter} onValueChange={(val) => setAdminBranchFilter(val || '')}>
                 <SelectTrigger className="w-[180px] h-9 bg-slate-50 border-slate-200 rounded-lg text-sm font-medium">
                   <SelectValue placeholder="All Branches" />
                 </SelectTrigger>

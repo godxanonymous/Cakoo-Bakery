@@ -192,7 +192,7 @@ export default function AdminAnalyticsPage() {
                   />
                   <RechartsTooltip 
                     contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                    formatter={(value: number) => [`Rs. ${value.toLocaleString()}`, 'Revenue']}
+                    formatter={(value: any) => [`Rs. ${Number(value).toLocaleString()}`, 'Revenue']}
                   />
                   <Area 
                     type="monotone" 

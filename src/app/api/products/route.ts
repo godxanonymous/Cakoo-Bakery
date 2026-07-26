@@ -14,7 +14,7 @@ export async function GET() {
     const products: Product[] = [];
     const categoriesSet = new Set<string>();
 
-    snapshot.forEach((doc) => {
+    snapshot.forEach((doc: any) => {
       const data = doc.data() as Product;
       // Ensure the id matches the document id
       data.id = doc.id;
