@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-fredoka: var(--font-fredoka);
+  --font-inter: var(--font-inter);
+  --font-poppins: var(--font-poppins);
+
+  --color-mint-primary: #C1A266; /* Mapping to gold */
+  --color-mint-secondary: #E4BF78; 
+  --color-sage: #3D2C16;
+  --color-olive: #5B654A; /* Admin UI Primary Color */
+  --color-olive-foreground: #FFFFFF;
+  --color-bg-light: #FBF4E4;
+  --color-cream: #FFFFFF;
+  --color-gold: #E4BF78;
+  --color-text-primary: #48341B;
+  --color-text-secondary: #7E705F;
+  --color-border-light: #E3E0DC;
+  --color-success: #7FBF90;
+  --color-error: #E57373;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  :root {
+    --background: #FBF4E4; /* Cream bg */
+    --foreground: #48341B; /* Dark brown text */
+
+    --card: #FFFFFF;
+    --card-foreground: #48341B;
+
+    --popover: #FFFFFF;
+    --popover-foreground: #48341B;
+
+    --primary: #48341B; /* Cakoo brown */
+    --primary-foreground: #FFFFFF;
+
+    --secondary: #E4BF78; /* Cakoo gold */
+    --secondary-foreground: #322412;
+
+    --muted: #E3E0DC;
+    --muted-foreground: #7E705F;
+
+    --accent: #E3E0DC;
+    --accent-foreground: #48341B;
+
+    --destructive: #E57373;
+    --destructive-foreground: #ffffff;
+
+    --border: #E3E0DC;
+    --input: #E3E0DC;
+    --ring: #C1A266;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #322412;
+    --foreground: #FBF4E4;
+
+    --card: #3D2C16;
+    --card-foreground: #FBF4E4;
+
+    --popover: #3D2C16;
+    --popover-foreground: #FBF4E4;
+
+    --primary: #E4BF78;
+    --primary-foreground: #322412;
+
+    --secondary: #48341B;
+    --secondary-foreground: #FBF4E4;
+
+    --muted: #3D2C16;
+    --muted-foreground: #ECD2A0;
+
+    --accent: #3D2C16;
+    --accent-foreground: #FBF4E4;
+
+    --destructive: #E57373;
+    --destructive-foreground: #FBF4E4;
+
+    --border: #7E705F;
+    --input: #7E705F;
+    --ring: #E4BF78;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+}
