@@ -3,9 +3,9 @@ import { getFirestore } from 'firebase-admin/firestore';
 import { getStorage } from 'firebase-admin/storage';
 import { getAuth } from 'firebase-admin/auth';
 
-let adminDb = null;
-let adminStorage = null;
-let adminAuth = null;
+let adminDb: any = null;
+let adminStorage: any = null;
+let adminAuth: any = null;
 
 try {
   if (!getApps().length) {
