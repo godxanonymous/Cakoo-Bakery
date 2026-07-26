@@ -1,11 +1,7 @@
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
-import { getStorage } from 'firebase-admin/storage';
-import { getAuth } from 'firebase-admin/auth';
 
 let adminDb: any = null;
-let adminStorage: any = null;
-let adminAuth: any = null;
 
 try {
   if (!getApps().length) {
@@ -29,11 +25,9 @@ try {
 
   if (getApps().length > 0) {
     adminDb = getFirestore();
-    adminStorage = getStorage();
-    adminAuth = getAuth();
   }
 } catch (error) {
   console.error('Firebase Admin initialization error', error);
 }
 
-export { adminDb, adminStorage, adminAuth };
+export { adminDb };
