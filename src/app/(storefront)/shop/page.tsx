@@ -409,7 +409,7 @@ function ShopContent() {
             {/* Dropdowns & Filters Container */}
             <div className="flex flex-col md:flex-row items-center gap-3 w-full xl:w-auto flex-wrap xl:flex-nowrap justify-center xl:justify-end">
               
-              <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+              <div className="grid grid-cols-2 sm:flex sm:flex-row items-center gap-3 w-full md:w-auto">
                 <Select value={collection} onValueChange={(val) => val && setCollection(val)}>
                   <SelectTrigger className="w-full sm:w-[160px] lg:w-[180px] shrink-0 h-12 bg-transparent border-none shadow-none hover:bg-black/5 rounded-full transition-colors text-sm font-medium text-text-primary">
                     <SelectValue placeholder="Collection" />
@@ -435,7 +435,7 @@ function ShopContent() {
 
               <div className="w-px h-6 bg-black/10 hidden xl:block mx-1 shrink-0 self-center" />
 
-              <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+              <div className="grid grid-cols-2 sm:flex sm:flex-row items-center gap-3 w-full md:w-auto">
                 <Select value={sortBy} onValueChange={(val) => val && setSortBy(val)}>
                   <SelectTrigger className="w-full sm:w-[160px] lg:w-[170px] shrink-0 h-12 bg-transparent border-none shadow-none hover:bg-black/5 rounded-full transition-colors text-sm font-medium text-text-primary">
                     <SelectValue placeholder="Sort" />
